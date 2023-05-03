@@ -19,7 +19,7 @@ class CreateMovieFragment : Fragment() {
         MovieViewModel.Factory
     }
 
-    private lateinit var binding: FragmentCreateMovieBinding
+    lateinit var binding: FragmentCreateMovieBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,6 +35,7 @@ class CreateMovieFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setViewModel()
+        observeStatus()
     }
 
     private fun setViewModel(){
